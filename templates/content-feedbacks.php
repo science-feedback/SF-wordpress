@@ -134,6 +134,7 @@
         <p class="small">
             Published on: <?php echo get_the_date( 'd M Y' ); ?> &#124; Editor: <?php the_author_posts_link(); ?>
         </p>
+<!--
   <div class="bot-box">
       <div class="row spaceup1">
           <div class="col-sm-9">
@@ -147,9 +148,6 @@ Please <a href="https://climatefeedback.org/contact-us/">get in touch</a> if you
           </div>
       </div>
   </div>
-
-
-  <!--  <h1>--><?php //echo get_post_meta( get_the_ID(), 'score', true ); ?><!--</h1>-->
-
+-->
 
 <?php endwhile; ?>

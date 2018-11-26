@@ -1,4 +1,4 @@
-/* Custom stylings for the climate feedback theme */
+/* Custom stylings for the health feedback theme */
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:500,400,300,800,700);
 
@@ -84,7 +84,7 @@ a {
   }
 
   &.btn {
-    background-color: #3AAFCB;
+    background-color: #669999;
   }
   &.inline-btn {
     text-decoration: none;
@@ -175,7 +175,7 @@ h3 {
 }
 
 .sigla {
-  background-image: url(https://climatefeedback.org/wp-content/uploads/2015/07/copyright_2013_EUMETSAT_optimized.jpg);
+  background-image: url(https://climatefeedback.org/wp-content/uploads/temp/darkgel_med_side_mid.png);
   background-repeat: no-repeat;
   background-color: transparent;
   background-size: cover;
@@ -186,7 +186,7 @@ h3 {
   position: relative;
   margin: 0 -30px;
   padding: 0.35rem 30px;
-  background-image: url(https://climatefeedback.org/wp-content/uploads/2015/07/copyright_2013_EUMETSAT_optimized.jpg);
+  background-image: url(https://climatefeedback.org/wp-content/uploads/temp/darkgel_med_side_mid.png);
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -278,7 +278,7 @@ footer {
   &.content-info {
     padding-bottom: 20px;
     padding-top: 10px;
-    background: #046380;
+    background: #666699;
     color: #FFF;
   }
 
@@ -319,7 +319,7 @@ section {
 }
 
 .separator {
-    background: #046380;
+    background: #666699;
     color: #fff;
 }
 
@@ -356,7 +356,7 @@ section {
     padding: 3px;
 
     &:hover {
-      color: #cccccc;
+      color: #999;
     }
   }
 }
@@ -542,13 +542,13 @@ section {
 // }
 
 .campaign {
-  background: #046380;
+  background: #666699;
   color: #FFF;
   margin-top: -1.9em;
 }
 
 .scientist-signup {
-  background: #046380;
+  background: #666699;
   color: #FFF;
 }
 
@@ -992,7 +992,7 @@ section.widget {
     }
   }
   &__takeaway {
-    background-color: #046380;
+    background-color: #666699;
     padding: 10px;
     &__icon {
       padding: 5px;
@@ -1033,7 +1033,7 @@ section.widget {
   }
   &-aim {
     color: white;
-    background-color: #046380;
+    background-color: #666699;
     @media (min-width: $screen-sm-min) {
       padding-left: 5%;
       padding-right: 5%;
