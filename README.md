@@ -1,4 +1,4 @@
-# Climate Feedback Wordpress Theme
+# Health Feedback Wordpress Theme
 
 ## Install a Wordpress app first
 
@@ -6,10 +6,10 @@
 
 2. Use [MAMP](https://www.mamp.info/en/) and don't forget to start Start Servers at each new use.
 
-3. Install the [Climate Feedback wordpress-theme](https://github.com/ClimateFeedback/wordpress-theme):
+3. Install the [Health Feedback wordpress-theme](https://github.com/HealthFeedback/wordpress-theme):
 
 ```
-cd wp-content/themes && git clone git@github.com:ClimateFeedback/wordpress-theme.git
+cd wp-content/themes && git clone git@github.com:HealthFeedback/wordpress-theme.git
 ```
 
 In the admin, don't forget to activate the theme.
@@ -26,10 +26,10 @@ In the admin, don't forget to activate the theme.
 4. Synchronize with the database of the prod website
 
   - Make sure you have activate the Database Sync plugin.
-  - Go to Settings/Database Sync and copy paste the token found [there](http://climatefeedback.org/wp-admin/tools.php?page=dbs_options)
+  - Go to Settings/Database Sync and copy paste the token found [there](http://healthfeedback.org/wp-admin/tools.php?page=dbs_options)
   - Press the Sync button and then the Pull button
 
-N.B.: Make sure that Emmanuel made you admin if you want to have access to the Media Library and Page editing rights.
+N.B.: Make sure you have been made an admin if you want to have access to the Media Library and Page editing rights.
 
 5. Synchronize your media library
 
