@@ -311,6 +311,7 @@ Health Feedback is a worldwide network of scientists sorting fact from fiction i
        
 
 <!-- Begin MailChimp Signup Form -->
+ <!--   
 <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
     #mc_embed_signup{background:#fff; clear:left; }
@@ -375,7 +376,7 @@ Health Feedback is a worldwide network of scientists sorting fact from fiction i
 
         </section>
 <!--End mc_embed_signup-->
-        
+    
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -388,3 +389,4 @@ Health Feedback is a worldwide network of scientists sorting fact from fiction i
     }
   }
 </script>
+-->
