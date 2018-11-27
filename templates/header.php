@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand navbar-brand__logo logo" href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/biotechfeedback_logo.png"> <span>Health Feedback</span></a>
+        <a class="navbar-brand navbar-brand__logo logo" href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/healthfeedback_logo.png"> <span>Health Feedback</span></a>
     </div>
       
     <nav class="collapse navbar-collapse" role="navigation">

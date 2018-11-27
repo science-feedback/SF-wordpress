@@ -382,7 +382,7 @@ Health Feedback is a worldwide network of scientists sorting fact from fiction i
     "@type": "WebPage",
     "publisher": {
       "@type": "Organization",
-      "logo": "https://climatefeedback.org/wp-content/themes/wordpress-theme/dist/images/Climate_Feedback_logo_s.png",
+      "logo": "http://healthfeedback.org/wp-content/themes/wordpress-theme/dist/images/healthfeedback_logo.png",
       "name": "Health Feedback",
       "url": "<?php echo esc_url(home_url()); ?>"
     }
