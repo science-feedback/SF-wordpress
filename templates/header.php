@@ -50,7 +50,7 @@
       <!-- Social Media -->
       <div class="social-media pull-right">
            <!--  <a data-tooltip="Subscribe to our email news feed" class="tooltip-bottom" href="https://eepurl.com/bwqJtz"><i class="fa fa-envelope"></i></a>-->
-          <a href="https://facebook.com/ScienceFeedback/" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="https://facebook.com/HealthFeedback/" target="_blank"><i class="fa fa-facebook"></i></a>
           <a href="https://twitter.com/HealthFeedback" target="_blank"><i class="fa fa-twitter"></i></a>
            <a href="<?php bloginfo('rss2_url'); ?>" title="RSS Feed"><i class="fa fa-rss"></i></a>
       </div>

@@ -28,7 +28,7 @@
 			<p class="small"><a href="/contact-us/">Contact us</a></p>
             <h4 class="spaceup05">FOLLOW US</h4>
             <div class="social-footer">
-                <a href="https://www.facebook.com/ScienceFeedback/" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.facebook.com/HealthFeedback/" target="_blank"><i class="fa fa-facebook"></i></a>
                 <a href="https://twitter.com/HealthFeedback" target="_blank"><i class="fa fa-twitter"></i></a>
             </div>
 	  	</div>

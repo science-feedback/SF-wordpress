@@ -36,115 +36,10 @@ function section_shortcode( $atts, $content = null ) {
 add_shortcode( 'eval-separator', 'section_shortcode' );
 
 
-// Creating the CAMPAIGN WIDGET
-class wpb_widget extends WP_Widget {
-
-  function __construct() {
-    parent::__construct(
-    // Base ID of your widget
-      'wpb_widget',
-
-      // Widget name will appear in UI
-      __('Campaign Widget', 'wpb_widget_domain'),
-
-      // Widget description
-      array( 'description' => __( 'This is the kickstarter campaign widget', 'wpb_widget_domain' ), )
-    );
-  }
-
-  // Creating widget front-end
-  public function widget( $args, $instance ) {
-    $title = apply_filters( 'widget_title', $instance['title'] );
-    $description = apply_filters( 'widget_description', $instance['description'] );
-    $link = apply_filters('widget_link', $instance['link']);
-    $button = apply_filters('widget_button', $instance['button']);
-    $imgURL = get_bloginfo('template_url');
-    // before and after widget arguments are defined by themes
-    echo $args['before_widget'];
-    if ( is_single() ) {
-      echo '<img src="' . $imgURL . '/img/campaign-splash-sm.png" class="img-responsive campaign-img hidden-xs">'; // smaller img
-      echo '<img src="' . $imgURL . '/img/campaign-splash.jpg" class="img-responsive campaign-img visible-xs">'; // larger img
-
-      echo "<div class='campaign-content'>";
-      echo $args['before_title'] . $title . $args['after_title'];
-      echo "<p class='large'>" . $args['before_description'] . $description . $args['after_description'] . "</p>";
-      echo "</div>";
-
-      echo "<a class='btn btn-primary btn-lg campaign-button' href='$link' target='_blank'>$button</a>";
-
-      // This is where you run the code and display the output
-      echo __($args['before_description'], 'wpb_widget_description');
-      echo $args['after_widget'];
-    }
-  }
-
-  // Widget Backend
-  public function form( $instance ) {
-    if ( isset( $instance[ 'title' ] ) ) {
-      $title = $instance[ 'title' ];
-      $description = $instance[ 'description' ];
-      $link = $instance['link'];
-      $button = $instance['button'];
-    }
-    else {
-      $title = __( 'New title', 'wpb_widget_domain' );
-      $description = __( 'New description', 'wpb_widget_description' );
-      $link = __( 'New button link', 'wpb_widget_link');
-      $button = __( 'New button title', 'wpb_widget_button');
-    }
-    // Widget admin form
-    ?>
-
-    <p>
-      <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Campaign Title:' ); ?></label>
-      <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-
-      <label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e( 'Description:' ); ?></label>
-      <input class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo $this->get_field_name( 'description' ); ?>" type="text" value="<?php echo esc_attr( $description ); ?>" />
-
-      <label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Button Link:' ); ?></label>
-      <input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>" name="<?php echo $this->get_field_name( 'link' ); ?>" type="text" value="<?php echo esc_attr( $link ); ?>" />
-
-      <label for="<?php echo $this->get_field_id( 'button' ); ?>"><?php _e( 'Button Title:' ); ?></label>
-      <input class="widefat" id="<?php echo $this->get_field_id( 'button' ); ?>" name="<?php echo $this->get_field_name( 'button' ); ?>" type="text" value="<?php echo esc_attr( $button ); ?>" />
-    </p>
-  <?php
-  }
-
-  // Updating widget replacing old instances with new
-  public function update( $new_instance, $old_instance ) {
-    $instance = array();
-    $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-    $instance[ 'description' ] = ( ! empty( $new_instance['description'] ) ) ? strip_tags( $new_instance['description'] ) : '';
-    $instance[ 'link' ] = ( ! empty( $new_instance['link'] ) ) ? strip_tags( $new_instance['link'] ) : '';
-    $instance[ 'button' ] = ( ! empty( $new_instance['button'] ) ) ? strip_tags( $new_instance['button'] ) : '';
-    return $instance;
-  }
-} // Class wpb_widget ends here
-
-
-// Register and load the widget
-function wpb_load_widget() {
-  register_widget( 'wpb_widget' );
-}
-add_action( 'widgets_init', 'wpb_load_widget' );
-
 
 // Allowing to use shortcode in WIDGETS 
 add_filter('widget_text', 'do_shortcode');
 
-
-
-//repositioning the jetpack sharing icons OLD
-function jptweak_remove_share() {
-  remove_filter( 'the_content', 'sharing_display',19 );
-  remove_filter( 'the_excerpt', 'sharing_display',19 );
-  if ( class_exists( 'Jetpack_Likes' ) ) {
-    remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
-  }
-}
-
-add_action( 'loop_start', 'jptweak_remove_share' );
 
 // Adds evaluations post types to the rss feed
 function myfeed_request($qv) {
@@ -403,18 +298,17 @@ function create_user_custom_terms( $user_id ){
     // Insert the post into the database
     $post_id = wp_insert_post( $user_post );
 
-    // Add custom company info as custom fields
+    // Add custom info as custom fields
     // add_post_meta( $post_id, 'company_id', $user_info->ID ); //add user_image ?
      add_post_meta( $post_id, 'last_name', $user_info->last_name );
-     add_post_meta( $post_id, 'hypothesis', $user_info->hypothesis );
      add_post_meta( $post_id, 'expertise', $user_info->expertise );
      add_post_meta( $post_id, 'affiliation', $user_info->affiliation );
      add_post_meta( $post_id, 'title', $user_info->title );
      add_post_meta( $post_id, 'website', $user_info->user_url );
 
 }
-add_action( 'wppb_after_user_approval', 'create_user_custom_terms', 20 );
-// add_action( 'edit_user_profile_update', 'create_user_custom_terms', 20 ); //temporary for update
+// add_action( 'wppb_after_user_approval', 'create_user_custom_terms', 20 );
+add_action( 'user_register', 'create_user_custom_terms', 20 );
 
 
 
