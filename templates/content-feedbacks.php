@@ -18,7 +18,7 @@
 
     <div class="entry-content">
         
-       <p class=""><?php echo get_post_meta( get_the_ID(), 'cred', true ) ?> <span class="infobox"><span class="infolink"></span><span class="infoboxtext small"><a target="_blank" href="https://climatefeedback.org/process/#tit4">more about the credibility rating</a></span></span>  
+       <p class=""><?php echo get_post_meta( get_the_ID(), 'cred', true ) ?> <span class="infobox"><span class="infolink"></span><span class="infoboxtext small"><a target="_blank" href="http://healthfeedback.org/process/#tit4">more about the credibility rating</a></span></span>  
         
           <?php if( get_the_term_list( get_the_ID(), 'article-tag', true ) ): ?>
 <br /> A majority of reviewers tagged the article as: <?php echo do_shortcode('[article-tags]'); ?>.
@@ -51,8 +51,8 @@
 				"@type": "Article",
 				"author": {
 					"@type": "Organization",
-					"logo": "https://climatefeedback.org/wp-content/themes/wordpress-theme/dist/images/Climate_Feedback_logo_s.png",
-					"name": "Climate Feedback"
+					"logo": "http://healthfeedback.org/wp-content/themes/wordpress-theme/dist/images/healthfeedback_logo.png",
+					"name": "Health Feedback"
 				},
 				"datePublished": "<?php echo get_the_date('d M Y'); ?>",
 				"image": {
@@ -64,15 +64,15 @@
 				"headline": "<?php echo substr(esc_attr(get_the_excerpt()),0,110);?>",
 				"publisher": {
 					"@type": "Organization",
-					"logo": "https://climatefeedback.org/wp-content/themes/wordpress-theme/dist/images/Climate_Feedback_logo_s.png",
-					"name": "Climate Feedback"
+					"logo": "http://healthfeedback.org/wp-content/themes/wordpress-theme/dist/images/healthfeedback_logo.png",
+					"name": "Health Feedback"
 				},
 				"review": {
          				"@type": "Review",
          				"author": {
             					"@type": "Organization",
-          			  		"logo": "https://climatefeedback.org/wp-content/themes/wordpress-theme/dist/images/Climate_Feedback_logo_s.png",
-            					"name": "Climate Feedback",
+          			  		"logo": "http://healthfeedback.org/wp-content/themes/wordpress-theme/dist/images/healthfeedback_logo.png",
+            					"name": "Health Feedback",
 						"url": "<?php echo esc_url(home_url()); ?>"
          			 	},
   					"datePublished": "<?php echo get_post_meta( get_the_ID(), 'date', true); ?>",
@@ -84,8 +84,8 @@
 					},
 					"publisher": {
 						"@type": "Organization",
-						"logo": "https://climatefeedback.org/wp-content/themes/wordpress-theme/dist/images/Climate_Feedback_logo_s.png",
-						"name": "Climate Feedback"
+						"logo": "http://healthfeedback.org/wp-content/themes/wordpress-theme/dist/images/healthfeedback_logo.png",
+						"name": "Health Feedback"
 					},
 					"itemReviewed": {
 						"@type": "CreativeWork",
