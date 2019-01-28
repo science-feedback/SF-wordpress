@@ -129,3 +129,53 @@ Health Feedback is a worldwide network of scientists sorting fact from fiction i
     </div>
   </div>
 </section>
+
+<div class="container">
+<div class="feeds-title h3">Insights</div>
+<?php
+    //Extract ID from category name
+    $theCatId = get_term_by( 'slug', 'insight', 'category' );
+    $theCatId = $theCatId->term_id;
+  $args = array(
+    'post_type' => array('post'),
+    // 'category_name' => array('insights'),
+    'cat' => $theCatId,
+    //'cat' => array('-claimreview', '-evaluation'),
+    'posts_per_page' => 2
+  );
+  $loop = new WP_Query( $args );
+?>
+<div class="feeds-container mr3 p1">
+  <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+    <a class="col col-lg-6" href="<?php echo get_permalink( get_the_ID() ); ?>" >
+      <div class='feed feed__perspective mb1 p2'>
+        <div class='feed__perspective__screenshot mb1'>
+          <img
+            class='feed__perspective__screenshot__img'
+            src="<?php echo simplexml_load_string(get_the_post_thumbnail())->attributes()->src;?>"
+          >
+        </div>
+        <div class='feed-title h3'>
+          <?php echo get_the_title(); ?>
+        </div>
+        <div class='feed-excerpt mb1'>
+          <?php echo get_trim_text(get_the_excerpt());?>
+        </div>
+        <div>
+          - <?php echo get_the_date( 'd M Y' ); ?>
+        </div>
+      </div>
+    </a>
+  <?php endwhile; ?>
+</div>
+<div class="feeds-more p1 mb3">
+  <a
+    class="feeds-more__link h4 p1"
+    href="<?php echo get_site_url(); ?>/insights/"
+  >
+    More Insights
+  </a>
+</div>
+
+
+</div><!-- / .container -->
