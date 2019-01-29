@@ -1,5 +1,5 @@
 <?php if ( ! is_page_template( 'template-campaign.php' ) ) { ?>
-<footer class="content-info" role="contentinfo">
+<footer class="content-info" role="contentinfo" id="content-info">
   <div class="container">
 	<div class="row">
 	  	<h3>health feedback </h3>
