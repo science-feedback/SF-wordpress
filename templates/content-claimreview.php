@@ -73,9 +73,7 @@
       </div>
         <br />
 
-
-        <h3>SCIENTISTS' REVIEW</h3>
-        <blockquote> <span style="color: #808080;">CLAIM:</span> "<?php echo get_post_meta( get_the_ID(), 'claimfull', true) ?>"
+        <blockquote> <span style="color: #808080;">FULL CLAIM:</span> "<?php echo get_post_meta( get_the_ID(), 'claimfull', true) ?>"
         </blockquote>
         <p><?php the_content(); ?></p>
       </div>
@@ -93,16 +91,16 @@
 				"@type": "Article",
 				"author": {
 					"@type": "Organization",
-					"logo": "https://climatefeedback.org/wp-content/themes/wordpress-theme/dist/images/Climate_Feedback_logo_s.png",
-					"name": "Climate Feedback",
+					"logo": "https://healthfeedback.org/wp-content/themes/wordpress-theme/dist/images/healthfeedback_logo.png",
+					"name": "Health Feedback",
 					"url": "<?php echo esc_url(home_url()); ?>"
 				},
 				"datePublished": "<?php echo get_the_date('d-m-Y'); ?>",
 				"headline": "<?php echo substr(get_the_title(), 0, 110); ?>",
 				"publisher": {
 					"@type": "Organization",
-					"logo": "https://climatefeedback.org/wp-content/themes/wordpress-theme/dist/images/Climate_Feedback_logo_s.png",
-					"name": "Climate Feedback",
+					"logo": "https://healthfeedback.org/wp-content/themes/wordpress-theme/dist/images/healthfeedback_logo.png",
+					"name": "Health Feedback",
 					"url": "<?php echo esc_url(home_url()); ?>"
 				},
 				"image": {
@@ -115,8 +113,8 @@
 					"@type": "ClaimReview",
          				"author": {
             					"@type": "Organization",
-          			  		"logo": "https://climatefeedback.org/wp-content/themes/wordpress-theme/dist/images/Climate_Feedback_logo_s.png",
-            					"name": "Climate Feedback",
+          			  		"logo": "https://healthfeedback.org/wp-content/themes/wordpress-theme/dist/images/healthfeedback_logo.png",
+            					"name": "Health Feedback",
 						"url": "<?php echo esc_url(home_url()); ?>"
          				 },
           				"claimReviewed": "<?php echo get_post_meta( get_the_ID(), 'claimshort', true); ?>",
@@ -163,12 +161,13 @@
         <p class="small">
             Published on: <?php echo get_the_date( 'd M Y' ); ?> &#124; Editor: <?php the_author_posts_link(); ?>
         </p>
+<!--  
 <div class="bot-box">
       <div class="row spaceup1">
           <div class="col-sm-9">
       <p class="small ">
-<em>Climate Feedback is a non-partisan, non-profit organization dedicated to science education. Our reviews are crowdsourced directly from a community of scientists with relevant expertise. We strive to explain whether and why information is or is not consistent with the science and to help readers know which news to trust. <br />
-Please <a href="https://climatefeedback.org/contact-us/">get in touch</a> if you have any comment or think there is an important claim or article that would need to be reviewed.</em>
+<em>Health Feedback is a non-partisan, non-profit organization dedicated to science education. Our reviews are crowdsourced directly from a community of scientists with relevant expertise. We strive to explain whether and why information is or is not consistent with the science and to help readers know which news to trust. <br />
+Please <a href="https://healthfeedback.org/contact-us/">get in touch</a> if you have any comment or think there is an important claim or article that would need to be reviewed.</em>
       </p>
           </div>
           <div class="col-sm-3">
@@ -176,5 +175,6 @@ Please <a href="https://climatefeedback.org/contact-us/">get in touch</a> if you
           </div>
       </div>
   </div>
+-->
 
 <?php endwhile; ?>
