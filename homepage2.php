@@ -113,6 +113,70 @@ Health Feedback is a worldwide network of scientists sorting fact from fiction i
 
     </div><!-- / .container -->
         
+<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    #mc_embed_signup{background:#fff; clear:left; }
+</style>
+    <section class="mc_embed_bar">
+    <div class="container" id="mc_embed_signup" style="background-color: #F5F5F5;overflow-y:hidden;">
+            <form action="https://climatefeedback.us9.list-manage.com/subscribe/post?u=e33d7323df2327db90438153a&amp;id=079e302eed" method="post" 
+                  id="mc-embedded-subscribe-form" 
+                  name="mc-embedded-subscribe-form" 
+                  class="validate overflow-hidden" 
+                  target="_blank" style="padding:5px;" novalidate>
+    <div class="row">
+      <div class="col-sm-12 call-to-action">
+        <div class="media-left">
+            <img
+          class="sci-fig" style="padding-bottom: 2.0em;"
+          src="<?php echo get_site_url(); ?>/wp-content/uploads/icons/paper-plane-xxl.png"
+            >
+        </div>
+        <div class="media-body">
+          <div
+        class="col lg-col-4 feeds__sign-up__inputs"
+        id="mc_embed_signup_scroll"
+      >
+              <h3 style="font-size: 21px;">Get scientists’ reviews delivered directly to your inbox</h3>
+              </div>
+          <div
+        class="col lg-col-4 feeds__sign-up__inputs"
+        id="mc_embed_signup_scroll"
+      >
+         <div style="width:110%;">
+           <input
+            class="feeds__sign-up__inputs__input mb1"
+            type="email"
+            value=""
+            name="EMAIL"
+            class="email"
+            id="mce-EMAIL"
+            placeholder="enter your email address"
+            required
+          >
+             <div class="feeds__sign-up__button">
+              <input
+               class="button feeds-submit feeds__sign-up__inputs__input feeds__sign-up__inputs__input__button forceblue"
+               type="submit"
+               value="Sign Up"
+               name="subscribe"
+               id="mc-embedded-subscribe"
+             >
+           </div>
+         </div>
+         <div style="position: absolute; left: -5000px;" aria-hidden="true">
+           <input type="text" name="b_e33d7323df2327db90438153a_e4773425e1" tabindex="-1" value="">
+        </div>
+       </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </section>
+<!--End mc_embed_signup-->
+
 <div class="container">
 <?php
 //Extract ID from category name
