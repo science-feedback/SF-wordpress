@@ -232,6 +232,102 @@ Health Feedback is a worldwide network of scientists sorting fact from fiction i
 
 </div><!-- / .container -->
 
+        
+        <div class="container"><!-- / RSS -->
+<h2><?php _e( 'Recent articles from Health Feedback:', 'my-text-domain' ); ?></h2>
+
+            <?php // Get RSS Feed(s)
+include_once( ABSPATH . WPINC . '/feed.php' );
+ 
+// Get a SimplePie feed object from the specified feed source.
+$rss = fetch_feed( 'http://healthfeedback.org/feed/' );
+ 
+if ( ! is_wp_error( $rss ) ) : 
+    $maxitems = $rss->get_item_quantity( 4 ); 
+    $rss_items = $rss->get_items( 0, $maxitems );
+endif;
+?>
+ 
+<ul>
+    <?php if ( $maxitems == 0 ) : ?>
+        <li><?php _e( 'No items', 'my-text-domain' ); ?></li>
+    <?php else : ?>
+        <?php foreach ( $rss_items as $item ) : ?>
+            <li>
+                <a href="<?php echo esc_url( $item->get_permalink() ); ?>"
+                    title="<?php printf( __( 'Posted %s', 'my-text-domain' ), $item->get_date('j F Y | g:i a') ); ?>">
+                    <?php echo esc_html( $item->get_title() ); ?> 
+                </a><br />
+                <?php echo  $item->get_description() ; ?>
+                <?php echo  $item->get_date('j F Y') ; ?>
+                <?php echo esc_url( $item->get_permalink() ); ?>
+                <br />
+                <?php 
+                $graph = OpenGraph::fetch( $item->get_permalink() );
+//print_r($graph);
+                foreach ($graph as $key => $value) {
+                  //echo htmlspecialchars("$key: ");
+                    if ($key == 'image'){
+                        $imgurl = $value;
+                    }
+                }
+                ?>
+                <img src="<?php echo $imgurl; ?>" width="400px" />
+                
+            </li>
+        <?php endforeach; ?>
+    <?php endif; ?>
+</ul>
+            
+            
+<h2><?php _e( 'Recent articles from Climate Feedback:', 'my-text-domain' ); ?></h2>
+
+            <?php // Get RSS Feed(s)
+include_once( ABSPATH . WPINC . '/feed.php' );
+ 
+// Get a SimplePie feed object from the specified feed source.
+$rss = fetch_feed( 'http://www.rssmix.com/u/8311644/rss.xml' );
+ 
+if ( ! is_wp_error( $rss ) ) : 
+    $maxitems = $rss->get_item_quantity( 4 ); 
+    $rss_items = $rss->get_items( 0, $maxitems );
+endif;
+?>
+ 
+<ul>
+    <?php if ( $maxitems == 0 ) : ?>
+        <li><?php _e( 'No items', 'my-text-domain' ); ?></li>
+    <?php else : ?>
+        <?php foreach ( $rss_items as $item ) : ?>
+            <li>
+                <a href="<?php echo esc_url( $item->get_permalink() ); ?>"
+                    title="<?php printf( __( 'Posted %s', 'my-text-domain' ), $item->get_date('j F Y | g:i a') ); ?>">
+                    <?php echo esc_html( $item->get_title() ); ?> 
+                </a><br />
+                <?php echo  $item->get_description() ; ?>
+                <?php echo  $item->get_date('j F Y') ; ?>
+                <?php echo esc_url( $item->get_permalink() ); ?>
+                <br />
+                <?php 
+                $graph = OpenGraph::fetch( $item->get_permalink() );
+//print_r($graph);
+                foreach ($graph as $key => $value) {
+                  //echo htmlspecialchars("$key: ");
+                    if ($key == 'image'){
+                        $imgurl = $value;
+                    }
+                }
+                ?>
+                <img src="<?php echo $imgurl; ?>" width="400px" />
+                
+            </li>
+        <?php endforeach; ?>
+    <?php endif; ?>
+</ul>        
+            
+        </div><!-- / .container RSS     -->
+
+        
 <section class="scientist-signup">
   <div class="container">
     <div class="row">
