@@ -254,11 +254,13 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
                 $authout = $e->innertext ; } ?>        
         
         
-        <a href="<?php echo $item->get_permalink(); ?>" >
+        
           <div class="feed feed__claim col col-lg-6 mb1">
             <div class="feed__claim__container relative">
             <div class='feed-title h3'>
-              <?php echo esc_html( $item->get_title() ); ?> 
+                <a href="<?php echo $item->get_permalink(); ?>" >
+                  <?php echo esc_html( $item->get_title() ); ?>  
+                </a>
             </div>
               <div class="feed__claim__container__illustration col col-4">
                 <div class="feed__claim__container__illustration__screenshot">
@@ -267,7 +269,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
               </div>
               <div class="feed__claim__container__content col col-8">
                 <div class="feed-excerpt feed__claim__container__content__text mb1">
-                  "<?php echo  $claim ; ?>"
+                  <?php echo  $claim ; ?>
                 </div>
                   <img class="feed__claim__container__content__verdict__img mb1"
                   src="<?php echo esc_url( $imgurlv ); ?>">
@@ -275,7 +277,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
               </div>
             </div>
           </div>
-        </a>
+       
       <?php endforeach; ?>
     </div>
     <div class="feeds-more mb1 p1">
