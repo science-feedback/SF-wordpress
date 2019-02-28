@@ -55,7 +55,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
         ?>
         <?php $myi = 0;?>
         <?php foreach ( $html->find('img') as $element ) : ?>                
-            <?php if ($myi == 1): ?>
+            <?php if ($myi == 2): ?>
                  <?php $imgurl = $element->src; ?>
              <?php endif; ?>
              <?php $myi++;?>
@@ -147,7 +147,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
         ?>
         <?php $myi = 0;?>
         <?php foreach ( $html->find('img') as $element ) : ?>                
-            <?php if ($myi == 1): ?>
+            <?php if ($myi == 2): ?>
                  <?php $imgurl = $element->src; ?>
              <?php endif; ?>
              <?php $myi++;?>
@@ -239,10 +239,10 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
         ?>
         <?php $myi = 0;?>
         <?php foreach ( $html->find('img') as $element ) : ?>                
-            <?php if ($myi == 1): ?>
+            <?php if ($myi == 2): ?>
                  <?php $imgurl = $element->src; ?>
              <?php endif; ?>
-             <?php if ($myi == 2): ?>
+             <?php if ($myi == 3): ?>
                  <?php $imgurlv = $element->src; ?>
              <?php endif; ?>
              <?php $myi++;?>
