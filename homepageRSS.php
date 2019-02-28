@@ -247,10 +247,11 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
              <?php endif; ?>
              <?php $myi++;?>
          <?php endforeach; ?>
-<?php foreach($html->find('span.fact-check-card__details__text') as $e)
-    $authout = $e->innertext ; ?>
-<?php foreach($html->find('span.claimshort') as $f)
-    $claim = $f->innertext ; ?>        
+         <?php foreach ($html->find('div.claimshort') as $ff) {
+             $claim = $ff->innertext ;
+          } ?> 
+          <?php foreach ($html->find('span.fact-check-card__details__text') as $e) {
+                $authout = $e->innertext ; } ?>        
         
         
         <a href="<?php echo $item->get_permalink(); ?>" >
