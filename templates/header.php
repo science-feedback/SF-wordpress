@@ -19,10 +19,17 @@
       ?>
       
             <ul id="menu-main" class="nav navbar-nav">
-                <!-- 
-<li class="menu-item  menu-item-object-page  mmenu">  
-                    <a href="<?php echo get_site_url(); ?>/About/">About</a>
+                
+                <li class="menu-item  menu-item-object-page  mmenu">  
+                    <a href="<?php echo get_site_url(); ?>/about/">About</a>
                 </li>
+                <li class="menu-item  menu-item-object-page  mmenu">  
+                    <a href="https://climatefeedback.org">Climate Feedback</a>
+                </li>
+                <li class="menu-item  menu-item-object-page  mmenu">  
+                    <a href="http://healthfeedback.org">Health Feedback</a>
+                </li>
+                <!-- 
                 <li class="menu-item  menu-item-object-page  mmenu">  
                     <a href="<?php echo get_site_url(); ?>/feedbacks/">Article Reviews</a>
                 </li>
@@ -51,8 +58,7 @@
         
       <!-- Social Media -->
        <div class="social-media pull-right">
-      <!--       <a data-tooltip="Subscribe to our email news feed" class="tooltip-bottom" href="http://eepurl.com/ggZuM5"><i class="fa fa-envelope"></i></a>
- -->
+           <a data-tooltip="Subscribe to our email news feed" class="tooltip-bottom" href="https://eepurl.com/bwqJtz"><i class="fa fa-envelope"></i></a>
           <a href="https://facebook.com/ScienceFeedback/" target="_blank"><i class="fa fa-facebook"></i></a>
           <a href="https://twitter.com/ScienceFeedback" target="_blank"><i class="fa fa-twitter"></i></a>
           <!--  <a href="<?php bloginfo('rss2_url'); ?>" title="RSS Feed"><i class="fa fa-rss"></i></a> -->

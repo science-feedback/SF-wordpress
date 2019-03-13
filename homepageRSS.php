@@ -83,7 +83,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     </div>
 </div><!-- / container Article Reviews Climate-->
 
-<div class="container"> <!-- Insight Health-->
+<div class="container"> <!-- Article Reviews Health-->
     <div class="feeds-title h3">Latest Article Reviews – HEALTH</div>     
     <?php // Get RSS Feed(s)
     include_once( ABSPATH . WPINC . '/feed.php' );
