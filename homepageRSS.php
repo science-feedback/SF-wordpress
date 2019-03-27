@@ -133,7 +133,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     <div class="feeds-title h3">Latest Insight articles – CLIMATE</div>     
     <?php // Get RSS Feed(s)
     include_once( ABSPATH . WPINC . '/feed.php' );
-    $rss = fetch_feed( 'https://climatefeedback.org/feed/?post_type=insight' ); 
+    $rss = fetch_feed( 'https://climatefeedback.org/insight/feed/' ); 
     if ( ! is_wp_error( $rss ) ) : 
         $maxitems = $rss->get_item_quantity( 2 ); 
         $rss_items = $rss->get_items( 0, $maxitems );
@@ -179,7 +179,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     <div class="feeds-title h3">Latest Insight articles – HEALTH</div>     
     <?php // Get RSS Feed(s)
     include_once( ABSPATH . WPINC . '/feed.php' );
-    $rss = fetch_feed( 'http://healthfeedback.org/feed/?post_type=insight' ); 
+    $rss = fetch_feed( 'http://healthfeedback.org/insight/feed/' ); 
     if ( ! is_wp_error( $rss ) ) : 
         $maxitems = $rss->get_item_quantity( 2 ); 
         $rss_items = $rss->get_items( 0, $maxitems );
