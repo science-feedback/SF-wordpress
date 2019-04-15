@@ -12,7 +12,7 @@
 	  	<div class="col-sm-3 col-xs-6">
 	  		<h4>COMMUNITY</h4>   
             <p class="small"><a href="https://climatefeedback.org/community/">Climate Reviewers</a></p>
-            <p class="small"><a href="http://healthfeedback.org/community/">Health Reviewers</a></p>
+            <p class="small"><a href="https://healthfeedback.org/community/">Health Reviewers</a></p>
             <p class="small"><a href="/for-scientists/">Apply to become a reviewer</a></p>
 	  	</div>
 	  	<div class="col-sm-3 col-xs-6">

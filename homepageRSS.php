@@ -87,7 +87,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     <div class="feeds-title h3">Latest Article Reviews – HEALTH</div>     
     <?php // Get RSS Feed(s)
     include_once( ABSPATH . WPINC . '/feed.php' );
-    $rss = fetch_feed( 'http://healthfeedback.org/feed/?post_type=evaluation' ); 
+    $rss = fetch_feed( 'https://healthfeedback.org/feed/?post_type=evaluation' ); 
     if ( ! is_wp_error( $rss ) ) : 
         $maxitems = $rss->get_item_quantity( 2 ); 
         $rss_items = $rss->get_items( 0, $maxitems );
@@ -96,7 +96,6 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     <div class="feeds-container mr3 p1">
       <?php foreach ( $rss_items as $item ) : ?>
         <?php require_once('lib/simplehtmldom_1_8_1/simple_html_dom.php');
-            // from https://www.electrictoolbox.com/extract-images-web-page-php/
             $html = file_get_html($item->get_permalink());
         ?>
         <?php $myi = 0;?>
@@ -123,7 +122,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
       <?php endforeach; ?>
     </div>
     <div class="feeds-more p1 mb1">
-      <a class="feeds-more__link h4 p1" href="http://healthfeedback.org/feedbacks/">
+      <a class="feeds-more__link h4 p1" href="https://healthfeedback.org/feedbacks/">
         More Health Article Reviews
       </a>
     </div>
@@ -142,7 +141,6 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     <div class="feeds-container mr3 p1">
       <?php foreach ( $rss_items as $item ) : ?>
         <?php require_once('lib/simplehtmldom_1_8_1/simple_html_dom.php');
-            // from https://www.electrictoolbox.com/extract-images-web-page-php/
             $html = file_get_html($item->get_permalink());
         ?>
         <?php $myi = 0;?>
@@ -179,7 +177,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     <div class="feeds-title h3">Latest Insight articles – HEALTH</div>     
     <?php // Get RSS Feed(s)
     include_once( ABSPATH . WPINC . '/feed.php' );
-    $rss = fetch_feed( 'http://healthfeedback.org/insight/feed/' ); 
+    $rss = fetch_feed( 'https://healthfeedback.org/insight/feed/' ); 
     if ( ! is_wp_error( $rss ) ) : 
         $maxitems = $rss->get_item_quantity( 2 ); 
         $rss_items = $rss->get_items( 0, $maxitems );
@@ -188,7 +186,6 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     <div class="feeds-container mr3 p1">
       <?php foreach ( $rss_items as $item ) : ?>
         <?php require_once('lib/simplehtmldom_1_8_1/simple_html_dom.php');
-            // from https://www.electrictoolbox.com/extract-images-web-page-php/
             $html = file_get_html($item->get_permalink());
         ?>
         <?php $myi = 0;?>
@@ -215,7 +212,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
       <?php endforeach; ?>
     </div>
     <div class="feeds-more p1 mb1">
-      <a class="feeds-more__link h4 p1" href="http://healthfeedback.org/insights/">
+      <a class="feeds-more__link h4 p1" href="https://healthfeedback.org/insights/">
         More Health Insights
       </a>
     </div>
@@ -234,7 +231,6 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     <div class="feeds-container feeds-container__claim ">
       <?php foreach ( $rss_items as $item ) : ?>
         <?php require_once('lib/simplehtmldom_1_8_1/simple_html_dom.php');
-            // from https://www.electrictoolbox.com/extract-images-web-page-php/
             $html = file_get_html($item->get_permalink());
         ?>
         <?php $myi = 0;?>
@@ -291,7 +287,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     <div class="feeds-title h3">Latest Claim Reviews – HEALTH</div>     
     <?php // Get RSS Feed(s)
     include_once( ABSPATH . WPINC . '/feed.php' );
-    $rss = fetch_feed( 'http://healthfeedback.org/feed/?post_type=claimreview' ); 
+    $rss = fetch_feed( 'https://healthfeedback.org/feed/?post_type=claimreview' ); 
     if ( ! is_wp_error( $rss ) ) : 
         $maxitems = $rss->get_item_quantity( 2 ); 
         $rss_items = $rss->get_items( 0, $maxitems );
@@ -301,7 +297,6 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     <div class="feeds-container feeds-container__claim ">
       <?php foreach ( $rss_items as $item ) : ?>
         <?php require_once('lib/simplehtmldom_1_8_1/simple_html_dom.php');
-            // from https://www.electrictoolbox.com/extract-images-web-page-php/
             $html = file_get_html($item->get_permalink());
         ?>
         <?php $myi = 0;?>
@@ -347,7 +342,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
       <?php endforeach; ?>
     </div>
     <div class="feeds-more mb3 p1">
-      <a class="feeds-more__link h4 p1" href="http://healthfeedback.org/claim-reviews/">
+      <a class="feeds-more__link h4 p1" href="https://healthfeedback.org/claim-reviews/">
         More Health Claim Reviews
       </a>
     </div>

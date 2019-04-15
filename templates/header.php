@@ -27,7 +27,7 @@
                     <a href="https://climatefeedback.org">Climate Feedback</a>
                 </li>
                 <li class="menu-item  menu-item-object-page  mmenu">  
-                    <a href="http://healthfeedback.org">Health Feedback</a>
+                    <a href="https://healthfeedback.org">Health Feedback</a>
                 </li>
                 <!-- 
                 <li class="menu-item  menu-item-object-page  mmenu">  
