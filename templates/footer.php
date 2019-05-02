@@ -24,8 +24,8 @@
             <p class="small"><a href="/team-advisors-contributors/">Team</a></p> -->
 	  	</div>
 	  	<div class="col-sm-3 col-xs-6">
-			<!--<h4 >GET IN TOUCH</h4>
-			<p class="small"><a href="/contact-us/">Contact us</a></p> -->
+			<h4 >GET IN TOUCH</h4>
+			<p class="small"><a href="/contact-us/">Contact us</a></p>
             <h4 class="spaceup05">FOLLOW US</h4>
             <div class="social-footer">
                 <a href="https://www.facebook.com/ScienceFeedback/" target="_blank"><i class="fa fa-facebook"></i></a>
