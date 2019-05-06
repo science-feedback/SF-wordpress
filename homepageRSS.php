@@ -347,4 +347,26 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
       </a>
     </div>
 </div><!-- / container Claim Reviews Health-->        
-        
+    
+<!-- Press
+<section class="press-show">
+  <div class="container">
+
+      <h3 style="font-size: 1.25rem;">Hear what they are saying about us</h3>
+    <div class="row">
+      <div class="col-4" style="padding-left: 1em; padding-right: 1em">
+        <a href="/press/annotation-might-future-fact-checking/" target="_blank"> <img class="press-fig img-responsive" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/ps-Poynter.png"> </a>
+      </div>
+      <div class="col-4">
+        <a href="/press/scientists-get-tool-to-mark-online-climate-science-media-coverage-and-its-not-a-rusty-teaspoon/" target="_blank">   <img class="press-fig img-responsive" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/the-guardian-logo_grey.png"></a>
+      </div>
+      <div class="col-4 forbes" style="padding-left: 2em">
+        <a href="/press/climate-scientists-launch-brainy-attack-inaccurate-news/" target="_blank"> <img class="press-fig img-responsive" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/ps-Forbes.png"></a>
+      </div>
+      <div class="col-4">
+        <a href="https://sciencefeedback.co/press-coverage/" class="btn btn-primary">More Press</a>
+      </div>
+    </div>
+  </div>
+</section>
+--> 

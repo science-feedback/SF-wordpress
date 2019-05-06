@@ -29,6 +29,12 @@
                 <li class="menu-item  menu-item-object-page  mmenu">  
                     <a href="https://healthfeedback.org">Health Feedback</a>
                 </li>
+                <li class="menu-item  menu-item-object-page  mmenu">  
+                    <a href="https://sciencefeedback.co/press-coverage/">Press</a>
+                </li>
+                <li class="menu-item  menu-item-object-page  mmenu">  
+                    <a href="https://sciencefeedback.co/donate/">Support us</a>
+                </li>
                 <!-- 
                 <li class="menu-item  menu-item-object-page  mmenu">  
                     <a href="<?php echo get_site_url(); ?>/feedbacks/">Article Reviews</a>
