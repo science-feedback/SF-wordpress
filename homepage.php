@@ -78,7 +78,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
       </a>
   <?php endwhile; ?>
 </div>
-    <div class="feeds-more mb3 p1">
+    <div class="feeds-more mb1 p1">
       <a class="feeds-more__link h4 p1" href="https://climatefeedback.org/feedbacks/">
         More Climate Article Reviews
       </a>
@@ -125,7 +125,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
       </a>
   <?php endwhile; ?>
 </div>
-    <div class="feeds-more mb3 p1">
+    <div class="feeds-more mb1 p1">
       <a class="feeds-more__link h4 p1" href="https://healthfeedback.org/feedbacks/">
         More Health Article Reviews
       </a>
@@ -260,7 +260,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     </a>
   <?php endwhile; ?>
 </div>
-    <div class="feeds-more mb3 p1">
+    <div class="feeds-more mb1 p1">
       <a class="feeds-more__link h4 p1" href="https://climatefeedback.org/claim-reviews/">
         More Climate Claim Reviews
       </a>
@@ -312,7 +312,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     </a>
   <?php endwhile; ?>
 </div>
-    <div class="feeds-more mb3 p1">
+    <div class="feeds-more mb1 p1">
       <a class="feeds-more__link h4 p1" href="https://healthfeedback.org/claim-reviews/">
         More Health Claim Reviews
       </a>
