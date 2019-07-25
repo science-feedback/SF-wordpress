@@ -37,6 +37,136 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
   </div></div>
 </div>
 
+<div class="container"> <!-- Claim Reviews Climate-->
+    <div class="feeds-title h3">Latest Claim Reviews – CLIMATE</div>     
+    <?php // Get RSS Feed(s)
+    include_once( ABSPATH . WPINC . '/feed.php' );
+    $rss = fetch_feed( 'https://climatefeedback.org/feed/?post_type=claimreview' ); 
+    if ( ! is_wp_error( $rss ) ) : 
+        $maxitems = $rss->get_item_quantity( 2 ); 
+        $rss_items = $rss->get_items( 0, $maxitems );
+    endif;
+    ?>
+    <div class="feeds-container feeds-container__claim ">
+      <?php foreach ( $rss_items as $item ) : ?>
+        <?php require_once('lib/simplehtmldom_1_8_1/simple_html_dom.php');
+            $html = file_get_html($item->get_permalink());
+        ?>
+        <?php $myi = 0;?>
+        <?php foreach ( $html->find('img') as $element ) : ?>                
+            <?php if ($myi == 2): ?>
+                 <?php $imgurl = $element->src; ?>
+             <?php endif; ?>
+             <?php if ($myi == 3): ?>
+                 <?php $imgurlv = $element->src; ?>
+             <?php endif; ?>
+             <?php $myi++;?>
+         <?php endforeach; ?>
+         <?php foreach ($html->find('div.claimshort') as $ff) {
+             $claim = $ff->innertext ;
+          } ?> 
+          <?php foreach ($html->find('span.fact-check-card__details__text') as $e) {
+                $authout = $e->innertext ; } ?>        
+        
+        
+        
+          <div class="feed feed__claim col col-lg-6 mb1">
+            <div class="feed__claim__container relative">
+            <div class='feed-title h3'>
+                <a href="<?php echo $item->get_permalink(); ?>" >
+                  <?php echo esc_html( $item->get_title() ); ?>  
+                </a>
+            </div>
+              <div class="feed__claim__container__illustration col col-4">
+                <div class="feed__claim__container__illustration__screenshot">
+                  <img class="feed__claim__container__illustration__screenshot__img" src="<?php echo esc_url( $imgurl ); ?>" >
+                </div>
+              </div>
+              <div class="feed__claim__container__content col col-8">
+                <div class="feed-excerpt feed__claim__container__content__text mb1">
+                  <?php echo  $claim ; ?>
+                </div>
+                  <img class="feed__claim__container__content__verdict__img mb1"
+                  src="<?php echo esc_url( $imgurlv ); ?>">
+                <div> <?php echo  $authout ; ?> </div>
+              </div>
+            </div>
+          </div>
+       
+      <?php endforeach; ?>
+    </div>
+    <div class="feeds-more mb1 p1">
+      <a class="feeds-more__link h4 p1" href="https://climatefeedback.org/claim-reviews/">
+        More Climate Claim Reviews
+      </a>
+    </div>
+</div><!-- / container Claim Reviews Climate-->
+
+<div class="container"> <!-- Insight Health-->
+    <div class="feeds-title h3">Latest Claim Reviews – HEALTH</div>     
+    <?php // Get RSS Feed(s)
+    include_once( ABSPATH . WPINC . '/feed.php' );
+    $rss = fetch_feed( 'https://healthfeedback.org/feed/?post_type=claimreview' ); 
+    if ( ! is_wp_error( $rss ) ) : 
+        $maxitems = $rss->get_item_quantity( 2 ); 
+        $rss_items = $rss->get_items( 0, $maxitems );
+    endif;
+    ?>
+    
+    <div class="feeds-container feeds-container__claim ">
+      <?php foreach ( $rss_items as $item ) : ?>
+        <?php require_once('lib/simplehtmldom_1_8_1/simple_html_dom.php');
+            $html = file_get_html($item->get_permalink());
+        ?>
+        <?php $myi = 0;?>
+        <?php foreach ( $html->find('img') as $element ) : ?>                
+            <?php if ($myi == 1): ?>
+                 <?php $imgurl = $element->src; ?>
+             <?php endif; ?>
+             <?php if ($myi == 2): ?>
+                 <?php $imgurlv = $element->src; ?>
+             <?php endif; ?>
+             <?php $myi++;?>
+         <?php endforeach; ?>
+         <?php foreach ($html->find('div.claimshort') as $ff) {
+             $claim = $ff->innertext ;
+          } ?> 
+          <?php foreach ($html->find('span.fact-check-card__details__text') as $e) {
+                $authout = $e->innertext ; } ?>            
+
+          <div class="feed feed__claim col col-lg-6 mb1">
+            <div class="feed__claim__container relative">
+            <div class='feed-title h3'>
+                <a href="<?php echo $item->get_permalink(); ?>" >
+                  <?php echo esc_html( $item->get_title() ); ?> 
+                </a>
+            </div>
+              <div class="feed__claim__container__illustration col col-4">
+                <div class="feed__claim__container__illustration__screenshot">
+                  <img class="feed__claim__container__illustration__screenshot__img" src="<?php echo esc_url( $imgurl ); ?>" >
+                </div>
+              </div>
+              <div class="feed__claim__container__content col col-8">
+                <div class="feed-excerpt feed__claim__container__content__text mb1">
+                    <?php echo  $claim ; ?>
+                </div>
+                  <img class="feed__claim__container__content__verdict__img mb1"
+                  src="<?php echo esc_url( $imgurlv ); ?>">
+                <div> 
+                    <?php echo  $authout ; ?> </div>
+              </div>
+            </div>
+          </div>
+        
+      <?php endforeach; ?>
+    </div>
+    <div class="feeds-more mb3 p1">
+      <a class="feeds-more__link h4 p1" href="https://healthfeedback.org/claim-reviews/">
+        More Health Claim Reviews
+      </a>
+    </div>
+</div><!-- / container Claim Reviews Health-->     
+
 <div class="container"> <!-- Article Reviews Climate-->
     <div class="feeds-title h3">Latest Article Reviews – CLIMATE</div>     
     <?php // Get RSS Feed(s)
@@ -87,7 +217,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     <div class="feeds-title h3">Latest Article Reviews – HEALTH</div>     
     <?php // Get RSS Feed(s)
     include_once( ABSPATH . WPINC . '/feed.php' );
-    $rss = fetch_feed( 'https://healthfeedback.org/feed/?post_type=evaluation' ); 
+    $rss = fetch_feed( 'https://healthfeedback.org/feed/?post_type=evaluation' );  
     if ( ! is_wp_error( $rss ) ) : 
         $maxitems = $rss->get_item_quantity( 2 ); 
         $rss_items = $rss->get_items( 0, $maxitems );
@@ -218,135 +348,7 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
     </div>
 </div><!-- / container Insight Health-->        
         
-<div class="container"> <!-- Claim Reviews Climate-->
-    <div class="feeds-title h3">Latest Claim Reviews – CLIMATE</div>     
-    <?php // Get RSS Feed(s)
-    include_once( ABSPATH . WPINC . '/feed.php' );
-    $rss = fetch_feed( 'https://climatefeedback.org/feed/?post_type=claimreview' ); 
-    if ( ! is_wp_error( $rss ) ) : 
-        $maxitems = $rss->get_item_quantity( 2 ); 
-        $rss_items = $rss->get_items( 0, $maxitems );
-    endif;
-    ?>
-    <div class="feeds-container feeds-container__claim ">
-      <?php foreach ( $rss_items as $item ) : ?>
-        <?php require_once('lib/simplehtmldom_1_8_1/simple_html_dom.php');
-            $html = file_get_html($item->get_permalink());
-        ?>
-        <?php $myi = 0;?>
-        <?php foreach ( $html->find('img') as $element ) : ?>                
-            <?php if ($myi == 2): ?>
-                 <?php $imgurl = $element->src; ?>
-             <?php endif; ?>
-             <?php if ($myi == 3): ?>
-                 <?php $imgurlv = $element->src; ?>
-             <?php endif; ?>
-             <?php $myi++;?>
-         <?php endforeach; ?>
-         <?php foreach ($html->find('div.claimshort') as $ff) {
-             $claim = $ff->innertext ;
-          } ?> 
-          <?php foreach ($html->find('span.fact-check-card__details__text') as $e) {
-                $authout = $e->innertext ; } ?>        
-        
-        
-        
-          <div class="feed feed__claim col col-lg-6 mb1">
-            <div class="feed__claim__container relative">
-            <div class='feed-title h3'>
-                <a href="<?php echo $item->get_permalink(); ?>" >
-                  <?php echo esc_html( $item->get_title() ); ?>  
-                </a>
-            </div>
-              <div class="feed__claim__container__illustration col col-4">
-                <div class="feed__claim__container__illustration__screenshot">
-                  <img class="feed__claim__container__illustration__screenshot__img" src="<?php echo esc_url( $imgurl ); ?>" >
-                </div>
-              </div>
-              <div class="feed__claim__container__content col col-8">
-                <div class="feed-excerpt feed__claim__container__content__text mb1">
-                  <?php echo  $claim ; ?>
-                </div>
-                  <img class="feed__claim__container__content__verdict__img mb1"
-                  src="<?php echo esc_url( $imgurlv ); ?>">
-                <div> <?php echo  $authout ; ?> </div>
-              </div>
-            </div>
-          </div>
-       
-      <?php endforeach; ?>
-    </div>
-    <div class="feeds-more mb1 p1">
-      <a class="feeds-more__link h4 p1" href="https://climatefeedback.org/claim-reviews/">
-        More Climate Claim Reviews
-      </a>
-    </div>
-</div><!-- / container Claim Reviews Climate-->
-
-<div class="container"> <!-- Insight Health-->
-    <div class="feeds-title h3">Latest Claim Reviews – HEALTH</div>     
-    <?php // Get RSS Feed(s)
-    include_once( ABSPATH . WPINC . '/feed.php' );
-    $rss = fetch_feed( 'https://healthfeedback.org/feed/?post_type=claimreview' ); 
-    if ( ! is_wp_error( $rss ) ) : 
-        $maxitems = $rss->get_item_quantity( 2 ); 
-        $rss_items = $rss->get_items( 0, $maxitems );
-    endif;
-    ?>
-    
-    <div class="feeds-container feeds-container__claim ">
-      <?php foreach ( $rss_items as $item ) : ?>
-        <?php require_once('lib/simplehtmldom_1_8_1/simple_html_dom.php');
-            $html = file_get_html($item->get_permalink());
-        ?>
-        <?php $myi = 0;?>
-        <?php foreach ( $html->find('img') as $element ) : ?>                
-            <?php if ($myi == 1): ?>
-                 <?php $imgurl = $element->src; ?>
-             <?php endif; ?>
-             <?php if ($myi == 2): ?>
-                 <?php $imgurlv = $element->src; ?>
-             <?php endif; ?>
-             <?php $myi++;?>
-         <?php endforeach; ?>
-         <?php foreach ($html->find('div.claimshort') as $ff) {
-             $claim = $ff->innertext ;
-          } ?> 
-          <?php foreach ($html->find('span.fact-check-card__details__text') as $e) {
-                $authout = $e->innertext ; } ?>            
-
-          <div class="feed feed__claim col col-lg-6 mb1">
-            <div class="feed__claim__container relative">
-            <div class='feed-title h3'>
-                <a href="<?php echo $item->get_permalink(); ?>" >
-                  <?php echo esc_html( $item->get_title() ); ?> 
-                </a>
-            </div>
-              <div class="feed__claim__container__illustration col col-4">
-                <div class="feed__claim__container__illustration__screenshot">
-                  <img class="feed__claim__container__illustration__screenshot__img" src="<?php echo esc_url( $imgurl ); ?>" >
-                </div>
-              </div>
-              <div class="feed__claim__container__content col col-8">
-                <div class="feed-excerpt feed__claim__container__content__text mb1">
-                    <?php echo  $claim ; ?>
-                </div>
-                  <img class="feed__claim__container__content__verdict__img mb1"
-                  src="<?php echo esc_url( $imgurlv ); ?>">
-                <div> 
-                    <?php echo  $authout ; ?> </div>
-              </div>
-            </div>
-          </div>
-        
-      <?php endforeach; ?>
-    </div>
-    <div class="feeds-more mb3 p1">
-      <a class="feeds-more__link h4 p1" href="https://healthfeedback.org/claim-reviews/">
-        More Health Claim Reviews
-      </a>
-    </div>
-</div><!-- / container Claim Reviews Health-->        
+   
     
 <!-- Press
 <section class="press-show">

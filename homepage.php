@@ -254,6 +254,9 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
             <div class="feed__claim__container__content__outlet">
               <?php echo get_post_meta( get_the_ID(), 'author', true); ?>, <?php echo get_post_meta( get_the_ID(), 'outlet', true); ?>
             </div>
+            <div>
+                - <?php echo get_the_date( 'd M Y' ); ?>
+            </div>
           </div>
         </div>
       </div>
@@ -305,6 +308,9 @@ Science Feedback is a worldwide network of scientists sorting fact from fiction 
             </div>
             <div class="feed__claim__container__content__outlet">
               <?php echo get_post_meta( get_the_ID(), 'author', true); ?>, <?php echo get_post_meta( get_the_ID(), 'outlet', true); ?>
+            </div>
+            <div>
+                - <?php echo get_the_date( 'd M Y' ); ?>
             </div>
           </div>
         </div>
