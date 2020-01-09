@@ -20,7 +20,7 @@
           </div>
           <div class="col-sm-4 p1">
             <div class="fact-check-card-title mb2">
-              CLAIM
+                <?php _e('CLAIM', 'claimreview-strings'); ?>
             </div>
             <div class="claimshort">
               "<?php echo get_post_meta( get_the_ID(), 'claimshort', true) ?>"
@@ -28,7 +28,7 @@
           </div>
           <div class="col-sm-4 p1">
             <div class="fact-check-card-title mb2">
-              VERDICT <span class="infobox"><span class="infolink"></span><span class="infoboxtext small"><a target="_blank" href="https://climatefeedback.org/claim-reviews-framework">more about the rating framework</a></span></span>
+              <?php _e('VERDICT', 'claimreview-strings'); ?> <span class="infobox"><span class="infolink"></span><span class="infoboxtext small"><a target="_blank" href="https://climatefeedback.org/claim-reviews-framework"><?php _e('more about the rating framework', 'claimreview-strings'); ?></a></span></span>
             </div>
             <div>
               <img
@@ -40,14 +40,14 @@
         </div>
         <div >
           <div class="mb2">
-            <p> <span class="fact-check-card-title">SOURCE:</span> <span class="fact-check-card__details__text small"><?php echo do_shortcode('[author]'); ?>, <?php echo do_shortcode('[outlet]'); ?>, <?php echo get_post_meta( get_the_ID(), 'date', true) ?>  &nbsp; <a target="_blank" title="See the claim in context" href=<?php echo get_post_meta( get_the_ID(), 'annotationsLink', true) ?> ><i class="fa fa-external-link" aria-hidden="true"></i></span></a>
+            <p> <span class="fact-check-card-title"><?php _e('SOURCE', 'claimreview-strings'); ?>:</span> <span class="fact-check-card__details__text small"><?php echo do_shortcode('[author]'); ?>, <?php echo do_shortcode('[outlet]'); ?>, <?php echo get_post_meta( get_the_ID(), 'date', true) ?>  &nbsp; <a target="_blank" title="See the claim in context" href=<?php echo get_post_meta( get_the_ID(), 'annotationsLink', true) ?> ><i class="fa fa-external-link" aria-hidden="true"></i></span></a>
             </p>
           </div>
         </div>
           <?php if( get_post_meta( get_the_ID(), 'details', true) ): ?>
             <div class="mb3">
                 <div class="fact-check-card-title mb1">
-                DETAILS
+                <?php _e('DETAILS', 'claimreview-strings'); ?>
                 </div>
                 <div class="fact-check-card__details__text">
                     <?php echo do_shortcode( get_post_meta( get_the_ID(), 'details', true) ) ?>
@@ -56,7 +56,7 @@
           <?php endif; ?>
         <div>
           <div class="fact-check-card-title mb2">
-            KEY TAKE AWAY
+            <?php _e('KEY TAKE AWAY', 'claimreview-strings'); ?>
           </div>
           <div class="fact-check-card__takeaway row">
             <div class="fact-check-card__takeaway__icon col-sm-2 center">
@@ -73,7 +73,7 @@
       </div>
         <br />
 
-        <blockquote> <span style="color: #808080;">FULL CLAIM:</span> "<?php echo get_post_meta( get_the_ID(), 'claimfull', true) ?>"
+        <blockquote> <span style="color: #808080;"><?php _e('FULL CLAIM', 'claimreview-strings'); ?>:</span> "<?php echo get_post_meta( get_the_ID(), 'claimfull', true) ?>"
         </blockquote>
         <p><?php the_content(); ?></p>
       </div>
@@ -159,7 +159,7 @@
        <i class="fa fa-tags fa-lg" aria-hidden="true"></i> <?php the_tags( '<span class="bot-tag">', '</span> &nbsp;<span class="bot-tag">', '</span>'); ?>
       </p>
         <p class="small">
-            Published on: <?php echo get_the_date( 'd M Y' ); ?> &#124; Editor: <?php the_author_posts_link(); ?>
+            <?php _e('Published on', 'claimreview-strings'); ?>: <?php echo get_the_date( 'd M Y' ); ?> &#124; <?php _e('Editor', 'claimreview-strings'); ?>: <?php the_author_posts_link(); ?>
         </p>
 
 <div class="bot-box">
