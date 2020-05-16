@@ -12,7 +12,7 @@
     <div class="entry-content">
       <div class="fact-check-card center">
         <div class="fact-check-card__row row p2">
-          <div class="fact-check-card__row__screenshot col-sm-4 p1">
+          <div class="fact-check-card__row__screenshot col-sm-4 p1 hidden-xs">
             <img
                 class="fact-check-card__row__screenshot__img"
                 src="<?php echo get_post_meta( get_the_ID(), 'screenshot', true)?>"
@@ -23,12 +23,12 @@
                 <?php _e('CLAIM', 'claimreview-strings'); ?>
             </div>
             <div class="claimshort">
-              "<?php echo get_post_meta( get_the_ID(), 'claimshort', true) ?>"
+              <?php echo get_post_meta( get_the_ID(), 'claimshort', true) ?>
             </div>
           </div>
           <div class="col-sm-4 p1">
             <div class="fact-check-card-title mb2">
-              <?php _e('VERDICT', 'claimreview-strings'); ?> <span class="infobox"><span class="infolink"></span><span class="infoboxtext small"><a target="_blank" href="https://climatefeedback.org/claim-reviews-framework"><?php _e('more about the rating framework', 'claimreview-strings'); ?></a></span></span>
+              <?php _e('VERDICT', 'claimreview-strings'); ?> <span class="infobox"><span class="infolink"></span><span class="infoboxtext small"><a target="_blank" href="https://sciencefeedback.co/claim-reviews-framework/"><?php _e('more about the rating framework', 'claimreview-strings'); ?></a></span></span>
             </div>
             <div>
               <img
@@ -39,7 +39,7 @@
           </div>
         </div>
         <div >
-          <div class="mb2">
+          <div class="mb2 hidden-xs">
             <p> <span class="fact-check-card-title"><?php _e('SOURCE', 'claimreview-strings'); ?>:</span> <span class="fact-check-card__details__text small"><?php echo do_shortcode('[author]'); ?>, <?php echo do_shortcode('[outlet]'); ?>, <?php echo get_post_meta( get_the_ID(), 'date', true) ?>  &nbsp; <a target="_blank" title="See the claim in context" href=<?php echo get_post_meta( get_the_ID(), 'annotationsLink', true) ?> ><i class="fa fa-external-link" aria-hidden="true"></i></span></a>
             </p>
           </div>
@@ -73,7 +73,7 @@
       </div>
         <br />
 
-        <blockquote> <span style="color: #808080;"><?php _e('FULL CLAIM', 'claimreview-strings'); ?>:</span> "<?php echo get_post_meta( get_the_ID(), 'claimfull', true) ?>"
+        <blockquote> <span style="color: #808080;"><?php _e('FULL CLAIM', 'claimreview-strings'); ?>:</span> <?php echo get_post_meta( get_the_ID(), 'claimfull', true) ?>
         </blockquote>
         <p><?php the_content(); ?></p>
       </div>
